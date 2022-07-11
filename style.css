@@ -1,0 +1,194 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(213, 11%, 19%);
+  --dark-blue: hsl(213, 26%, 14%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: var(--very-dark-blue);
+}
+
+/* Globals-------------------------------------- */
+button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+
+  border: none;
+}
+
+h1 {
+  color: var(--white);
+}
+
+p {
+  color: var(--light-grey);
+  font-size: 0.938rem;
+  line-height: 1.5rem;
+}
+
+.rating-section,
+.thankyou-section {
+  max-width: 80%;
+  min-width: 280px;
+}
+
+/* -------------------------------------------- */
+
+.rating-section {
+  width: 26.5rem;
+  height: 26.5rem;
+
+  padding: 2rem;
+
+  border-radius: 30px;
+  background: var(--dark-blue);
+}
+
+.star {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
+  background: var(--medium-grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+
+.rating-section h1 {
+  margin-bottom: 1rem;
+}
+
+.vote-options {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 2rem 0;
+}
+
+.vote-options button {
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+
+  color: var(--light-grey);
+  background: var(--medium-grey);
+}
+
+.vote-options button:hover {
+  color: var(--white);
+  background: var(--orange);
+
+  cursor: pointer;
+
+  transition: background 0.5s;
+}
+
+.vote-options button:focus {
+  color: var(--white);
+  background: var(--light-grey);
+
+  transition: background 0.5s;
+}
+
+.submit-button {
+  width: 100%;
+
+  color: var(--white);
+  background: var(--orange);
+
+  border-radius: 30px;
+  padding: 0.8rem;
+  letter-spacing: 0.1rem;
+
+  font-family: inherit;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button:hover {
+  color: var(--orange);
+  background: var(--white);
+
+  cursor: pointer;
+
+  transition: background 0.5s;
+}
+
+.thankyou-section {
+  width: 26.5rem;
+  height: 26.5rem;
+
+  padding: 2rem;
+  text-align: center;
+
+  border-radius: 30px;
+  background: var(--dark-blue);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thankyou-section svg {
+  margin-top: 1rem;
+}
+
+.vote-result {
+  margin: 2rem 0;
+}
+
+.vote-result p {
+  color: var(--orange);
+  background: var(--medium-grey);
+
+  border-radius: 30px;
+  padding: 0.3rem;
+
+  width: 12rem;
+}
+
+.thankyou-section h1 {
+  margin-bottom: 1rem;
+}
+
+.rating-section.hidden {
+  display: none;
+}
+
+.thankyou-section.hidden {
+  /* Hides the element without use display:none */
+  position: absolute;
+  left: -1000px;
+}
+
+@media (max-width: 447px) {
+  .vote-options {
+    margin: 1.3rem 0;
+  }
+}
