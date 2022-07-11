@@ -44,18 +44,17 @@ p {
   line-height: 1.5rem;
 }
 
-.rating-section,
-.thankyou-section {
+main {
   max-width: 80%;
   min-width: 280px;
+
+  width: 26.5rem;
+  height: 26.5rem;
 }
 
 /* -------------------------------------------- */
 
 .rating-section {
-  width: 26.5rem;
-  height: 26.5rem;
-
   padding: 2rem;
 
   border-radius: 30px;
@@ -141,9 +140,6 @@ p {
 }
 
 .thankyou-section {
-  width: 26.5rem;
-  height: 26.5rem;
-
   padding: 2rem;
   text-align: center;
 
